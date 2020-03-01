@@ -148,8 +148,8 @@ Subsystem	sftp	/usr/libexec/openssh/sftp-server
 #	ForceCommand cvs server
 
 # The following options are used to setup sftp service
-Match Group share
-	ChrootDirectory /srv/share
+Match User sftp
+	ChrootDirectory /srv/sftp
 	ForceCommand internal-sftp
 	AllowTcpForwarding no
 	X11Forwarding no
